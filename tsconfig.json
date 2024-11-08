@@ -2,13 +2,20 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "sourceMap": true,
     "module": "ESNext",
-    "target": "ESNext",
+    "target": "es6",
     "jsx": "react",
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
   },
-  "include": ["./main/**/*"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+    }
+  },
+  "include": ["src"],
   "exclude": ["./node_modules/**/*"]
 }
